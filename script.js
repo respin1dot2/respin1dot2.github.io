@@ -5,7 +5,10 @@ const videoEl = document.getElementById('video');
 
 const qrScanner = new QrScanner(
     videoEl,
-    result => console.log('decoded qr code:', result)
+    result => {
+        document.querySelector('#scanned-value').innerText = result;
+        console.log('decoded qr code:', result)
+    }
 )
 
 qrScanner.start();
