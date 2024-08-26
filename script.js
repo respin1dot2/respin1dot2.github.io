@@ -9,6 +9,3 @@ const qrScanner = new QrScanner(
 )
 
 qrScanner.start();
-
-console.log(qrScanner.listCameras());
-console.log(qrScanner.hasFlash());
